@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'OdibeeSans';
+    src: url('assets/OdibeeSans.ttf');
+}
+body{
+    font-family: 'OdibeeSans';
+    background-color: #E7D8C9;
+    margin:0;
+    padding:0;
+}
+#max-width-column {
+    background-color: white;
+    margin: 0 auto;
+    max-width: 100vw;
+    min-height: 100vh;
+    padding:0;
+    position: relative;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
