@@ -17,8 +17,19 @@ body{
     padding:0;
     position: relative;
 }
+.column-center-align{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
 a {
     text-decoration: none;
     color: black;
+}
+p{
+    margin:0;
+    padding:0;
 }
 

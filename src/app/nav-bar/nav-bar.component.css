@@ -39,10 +39,64 @@
     transform-origin: bottom left;
 }
 #hamburger{
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 40px;
+}
+#hamburger-input{
+    display:none;
+}
+#hamburger-line,#hamburger-line::after,#hamburger-line::before{
     position:absolute;
-    background:green;
-    height:100px;
-    width:100px;
+    content: "";
+    width:50px;
+    height: 8px;
+    background: black;
+    border-radius: 10px;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+#hamburger-line{
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+}
+#hamburger-line::after{
+    top:-200%;
+}
+#hamburger-line::before{
+    top:200%;
 }
 
-  
+#hamburger-input:checked + #hamburger #hamburger-line{
+
+    background:rgba(255,255,255,0)
+}
+#hamburger-input:checked + #hamburger #hamburger-line::before{
+    top: 0;
+    background-color: #E13535;
+    transform: rotate(-405deg);
+}
+#hamburger-input:checked + #hamburger #hamburger-line::after{
+    top: 0;
+    background-color: #E13535;
+    transform: rotate(405deg);
+}
+
+@media (max-width:600px){
+    #nav-button-group{
+        display:none;
+    }
+    #hamburger{
+        display:flex;
+    }
+    #nav-bar{
+        margin-right: 50px;
+    }
+}
